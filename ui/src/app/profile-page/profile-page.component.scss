@@ -1,0 +1,82 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  // border: 1px solid black;
+}
+
+.cover-photo {
+  width: 500px;
+  height: 250px;
+  // border: 1px solid #000;
+  align-self: center;
+  position: relative;
+  display: inline-block;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  margin-left: 30px;
+  margin-top: -60px;
+  align-self: center;
+  position: relative;
+  // display: inline-block;
+
+}
+
+.pic-container,
+.pic-container1 {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.edit {
+  align-self: flex-end;
+  margin-top: 0px;
+  display: none;
+  cursor: pointer;
+}
+
+.edit-profile {
+  align-self: flex-end;
+  margin-right: -21px;
+  display: none;
+  cursor: pointer;
+
+}
+
+.pic-container:hover .edit {
+  display: block;
+}
+
+.pic-container1:hover .edit-profile {
+  display: block;
+}
+
+.profile {
+  // border: 1px solid black;
+  display: flex;
+  // justify-items: center;
+  flex-direction: column;
+}
+
+.example-card {
+  max-width: 400px;
+  margin-top: 15px;
+}
+
+.example-header-image {
+  background-image: url('../../assets/user/phoebe.jpg');
+  background-size: cover;
+}
+
+.posts {
+  align-self: center;
+}
+
+.input_fileupload--hidden {
+  display: none;
+}
