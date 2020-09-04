@@ -5,10 +5,10 @@
 
   <div class="example-button-row">
     <div class="example-flex-container">
-      <button mat-icon-button aria-label="Button with a home icon">
+      <button mat-icon-button aria-label="Button with a home icon" (click)="navigateToHomePage()">
         <mat-icon>home</mat-icon>
       </button>
-      <button mat-icon-button aria-label="Button with a search icon">
+      <button mat-icon-button aria-label="Button with a search icon" [routerLink]="['/search']">
         <mat-icon>search</mat-icon>
       </button>
       <button mat-icon-button aria-label="Button with a add photos icon">
@@ -17,7 +17,7 @@
       <button mat-icon-button aria-label="Button with a notifications icon">
         <mat-icon>notifications_none</mat-icon>
       </button>
-      <button mat-icon-button aria-label="Button with a account box icon" routerLink="/profile">
+      <button mat-icon-button aria-label="Button with a account box icon" (click)="navigateToProfilePage()">
         <mat-icon>account_box</mat-icon>
       </button>
     </div>

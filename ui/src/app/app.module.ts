@@ -6,22 +6,22 @@ import { MaterialModule } from './material/material.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { ProfilePageComponent } from './profile-page/profile-page.component';
-import { SignupComponent } from './signup/signup.component';
+import { PostsComponent } from './posts/posts.component';
 
+import { AuthenticationModule } from './authentication/authentication.module';
+import { CommonComponentsModule } from './common-components/common-components.module';
+import { PostModule } from './posts/post/post.module';
+import { SearchComponent } from './search/search.component';
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    ProfilePageComponent,
-    SignupComponent,
-  ],
+  declarations: [AppComponent, PostsComponent, SearchComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
     BrowserAnimationsModule,
+    AuthenticationModule,
+    CommonComponentsModule,
+    PostModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="profile">
+  <div *ngIf="flag==='profile'" class="profile">
     <div class="pic-container">
       <mat-icon (click)="onClick($event)" class="edit">edit</mat-icon>
       <img class="cover-photo" src="{{ coverPhoto }}" alt="" />
