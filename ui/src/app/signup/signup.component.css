@@ -1,0 +1,17 @@
+.column1 {
+  float: left;
+  width: 30%;
+  height: 657px;
+}
+
+.column2 {
+  float: left;
+  width: 60%;
+}
+
+.picture {
+  width: 944px;
+  height: 657px;
+
+}
+
