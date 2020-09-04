@@ -8,9 +8,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, ProfilePageComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    ProfilePageComponent,
+    SignupComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
