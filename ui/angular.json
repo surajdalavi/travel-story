@@ -125,5 +125,8 @@
       }
     }
   },
-  "defaultProject": "angicon"
+  "defaultProject": "angicon",
+  "cli": {
+    "analytics": "b6f95643-0add-4b6b-826b-a9cddb1d784d"
+  }
 }
