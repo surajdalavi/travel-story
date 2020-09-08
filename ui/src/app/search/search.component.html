@@ -1,19 +1,14 @@
-
 <div class="container">
   <mat-form-field class="filter">
-  <mat-label>Filter</mat-label>
-      <mat-select [(value)]="selectedvalue">
-        <mat-option>None</mat-option>
-    <mat-option value="People">People</mat-option>
-    <mat-option value="Places">Places</mat-option>
-    <mat-option value="#">#</mat-option>
-      </mat-select>
-    </mat-form-field>
-    <input class="center" type="text" placeholder="Search..">
-  <button mat-button >Search</button>
+    <mat-label>Filter</mat-label>
+    <mat-select [(value)]="selectedvalue">
+      <mat-option>None</mat-option>
+      <mat-option value="People">People</mat-option>
+      <mat-option value="Places">Places</mat-option>
+      <mat-option value="#">#</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <input class="center" type="text" placeholder="Search..">
+  <button mat-button>Search</button>
 </div>
 {{selectedvalue}}
-
-  
-  
-    
