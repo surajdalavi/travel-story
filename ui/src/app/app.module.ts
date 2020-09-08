@@ -12,6 +12,7 @@ import { AuthenticationModule } from './authentication/authentication.module';
 import { CommonComponentsModule } from './common-components/common-components.module';
 import { PostModule } from './posts/post/post.module';
 import { SearchComponent } from './search/search.component';
+
 @NgModule({
   declarations: [AppComponent, PostsComponent, SearchComponent],
   imports: [
