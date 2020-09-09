@@ -9,5 +9,6 @@ import { MaterialModule } from '../../material/material.module';
 @NgModule({
   declarations: [PostComponent],
   imports: [CommonModule, PostRoutingModule, RouterModule, MaterialModule],
+  exports: [PostComponent],
 })
 export class PostModule {}
