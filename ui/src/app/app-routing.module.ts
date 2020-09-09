@@ -11,6 +11,12 @@ const routes: Routes = [
   { path: 'home-page', component: PostsComponent },
   { path: 'profile', component: PostsComponent },
   { path: 'search', component: SearchComponent },
+  {
+    path: 'post/:id/:slug',
+    loadChildren: () =>
+      import('./posts/post/post.module').then((m) => m.PostModule),
+    data: { routeState: 3 },
+  },
 ];
 
 @NgModule({
