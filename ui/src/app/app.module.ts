@@ -15,7 +15,12 @@ import { SearchComponent } from './search/search.component';
 import { AddPostComponent } from './posts/add-post/add-post.component';
 
 @NgModule({
-  declarations: [AppComponent, PostsComponent, SearchComponent, AddPostComponent],
+  declarations: [
+    AppComponent,
+    PostsComponent,
+    SearchComponent,
+    AddPostComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -27,5 +32,6 @@ import { AddPostComponent } from './posts/add-post/add-post.component';
   ],
   providers: [],
   bootstrap: [AppComponent],
+  entryComponents: [AddPostComponent],
 })
 export class AppModule {}
