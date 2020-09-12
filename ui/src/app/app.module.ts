@@ -12,9 +12,10 @@ import { AuthenticationModule } from './authentication/authentication.module';
 import { CommonComponentsModule } from './common-components/common-components.module';
 import { PostModule } from './posts/post/post.module';
 import { SearchComponent } from './search/search.component';
+import { AddPostComponent } from './posts/add-post/add-post.component';
 
 @NgModule({
-  declarations: [AppComponent, PostsComponent, SearchComponent],
+  declarations: [AppComponent, PostsComponent, SearchComponent, AddPostComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
