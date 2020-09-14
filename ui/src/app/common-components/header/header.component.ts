@@ -9,7 +9,7 @@ import { AddPostComponent } from 'src/app/posts/add-post/add-post.component';
 })
 export class HeaderComponent implements OnInit {
   constructor(private router: Router, public dialog: MatDialog) {}
-
+  showFiller = false;
   ngOnInit() {}
   navigateToProfilePage() {
     this.router.navigateByUrl('/profile', { state: { to: 'profile' } });

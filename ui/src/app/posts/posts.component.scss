@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   // border: 1px solid black;
+  // background-color: #000;
 }
 
 .cover-photo {
@@ -64,13 +65,18 @@
 }
 
 .example-card {
-  max-width: 400px;
+  max-width: 600px;
   margin-top: 15px;
 }
 
-.example-header-image {
-  background-image: url('../../assets/user/phoebe.jpg');
-  background-size: cover;
+.post-img {
+  height: 500px;
+}
+
+.display-picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 
 .posts {

@@ -13,16 +13,21 @@
     <div *ngFor="let post of post$ | async; trackBy: trackById">
       <mat-card class="example-card">
         <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>{{ post.name }}</mat-card-title>
+          <div mat-card-avatar>
+            <img class="display-picture" src={{userService.getProfilePic(post.username)}}>
+          </div>
+          <mat-card-title>{{ userService.getName(post.username) }}</mat-card-title>
           <mat-card-subtitle>{{ post.username }}</mat-card-subtitle>
         </mat-card-header>
-        <img mat-card-image src="../../assets/user/photo1.jpg" alt="Photo of a Shiba Inu" />
+        <img *ngIf="post.photos" mat-card-image src={{post.photos}} class="post-img" />
         <mat-card-content>
           <b> {{ post.title }} </b>
-          <p>
-            {{ post.slug }}
+          <p *ngIf="post.body[0].length>100;else elseBlock ">
+            {{ post.body[0].substring(0,100)}}...
           </p>
+          <ng-template #elseBlock>
+            <p>{{post.body[0]}}</p>
+          </ng-template>
         </mat-card-content>
         <mat-card-actions>
           <button mat-button>
@@ -31,7 +36,8 @@
           <button mat-button>
             <mat-icon>autorenew</mat-icon>SHARE
           </button>
-          <a [routerLink]="['/post', post.id, post.slug]" style="float: right;">Read More</a>
+          <a [routerLink]="['/post', post.id, post.slug]" style="float: right;" mat-flat-button color=accent>Read
+            More</a>
         </mat-card-actions>
       </mat-card>
     </div>
