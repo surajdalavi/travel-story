@@ -1,0 +1,34 @@
+.container1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  max-width: 600px;
+  margin-top: 15px;
+}
+
+.comments {
+  border: 1px solid black;
+  max-width: 600px;
+
+}
+
+.comment-card {
+  display: flex;
+  //   justify-content: space-between;
+  padding: 0.5em;
+}
+
+.user {
+  margin-right: 2em;
+}
+
+.example-header-image {
+  background-image: url('../../../assets/user/phoebe.jpg');
+  background-size: cover;
+}
+
+mat-card {
+  border-radius: 0;
+}

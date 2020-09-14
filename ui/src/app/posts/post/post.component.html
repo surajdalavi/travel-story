@@ -1,1 +1,38 @@
-<p>post works!</p>
+<div class="container1">
+  <mat-card class="card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{ post.name }}</mat-card-title>
+      <mat-card-subtitle>{{ post.username }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="../../assets/user/photo1.jpg" alt="Photo of a Shiba Inu" />
+    <mat-card-content>
+      <b> {{ post.title }} </b>
+      <p>
+        {{ post.body }}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>
+        <mat-icon>thumb_up</mat-icon>LIKE
+      </button>
+      <button mat-button>
+        <mat-icon>autorenew</mat-icon>SHARE
+      </button>
+    </mat-card-actions>
+  </mat-card>
+  <div class="comments">
+    <div class="comment-card" *ngFor="let user of userComments">
+      <div class="user">{{user.name}}</div>
+      <div class="comment">{{user.comment}}</div>
+    </div>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Outline form field</mat-label>
+        <input #comment matInput placeholder="Placeholder">
+        <mat-icon matSuffix (click)="addComment(comment)">send</mat-icon>
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+    </p>
+  </div>
+</div>
