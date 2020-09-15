@@ -1,1 +1,21 @@
-<p>login works!</p>
+<div class="page">
+  <div class="form">
+    <h1>Log In</h1>
+    <p>Username</p>
+    <p>Password</p>
+    <p>Submit</p>
+    <p (click)="forgot=!forgot" style="cursor: pointer;"> Forgot Password </p>
+    <div *ngIf="forgot">
+      <form>
+        <mat-form-field appearance="outline" color="primary">
+          <mat-label> Email ID </mat-label>
+          <input matInput placeholder="Enter email ID">
+        </mat-form-field>
+        <button mat-raised-button type="submit">Send Mail </button>
+      </form>
+    </div>
+  </div>
+  <div>
+    <img class="picture" src="../../../assets/coverp.jpg" alt="Photo of graph">
+  </div>
+</div>

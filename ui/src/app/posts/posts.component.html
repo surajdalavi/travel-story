@@ -11,29 +11,68 @@
   </div>
   <div class="posts">
     <div *ngFor="let post of post$ | async; trackBy: trackById">
-      <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>{{ post.name }}</mat-card-title>
-          <mat-card-subtitle>{{ post.username }}</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="../../assets/user/photo1.jpg" alt="Photo of a Shiba Inu" />
-        <mat-card-content>
-          <b> {{ post.title }} </b>
-          <p>
-            {{ post.slug }}
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button>
-            <mat-icon>thumb_up</mat-icon>LIKE
-          </button>
-          <button mat-button>
-            <mat-icon>autorenew</mat-icon>SHARE
-          </button>
-          <a [routerLink]="['/post', post.id, post.slug]" style="float: right;">Read More</a>
-        </mat-card-actions>
-      </mat-card>
+      <div *ngIf="flag==='profile';else all">
+        <mat-card *ngIf="post.username=='smelly-cat'" class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar>
+              <img class="display-picture" src={{userService.getProfilePic(post.username)}}>
+            </div>
+            <mat-card-title>{{ userService.getName(post.username) }}</mat-card-title>
+            <mat-card-subtitle>{{ post.username }}</mat-card-subtitle>
+          </mat-card-header>
+          <img *ngIf="post.photos" mat-card-image src={{post.photos}} class="post-img" />
+          <mat-card-content>
+            <b> {{ post.title }} </b>
+            <p *ngIf="post.body[0].length>100;else elseBlock ">
+              {{ post.body[0].substring(0,100)}}...
+            </p>
+            <ng-template #elseBlock>
+              <p>{{post.body[0]}}</p>
+            </ng-template>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>
+              <mat-icon>thumb_up</mat-icon>LIKE
+            </button>
+            <button mat-button>
+              <mat-icon>autorenew</mat-icon>SHARE
+            </button>
+            <a [routerLink]="['/post', post.id, post.slug]" style="float: right;" mat-flat-button color=accent>Read
+              More</a>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+      <ng-template #all>
+        <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar>
+              <img class="display-picture" src={{userService.getProfilePic(post.username)}}>
+            </div>
+            <mat-card-title>{{ userService.getName(post.username) }}</mat-card-title>
+            <mat-card-subtitle>{{ post.username }}</mat-card-subtitle>
+          </mat-card-header>
+          <img *ngIf="post.photos" mat-card-image src={{post.photos}} class="post-img" />
+          <mat-card-content>
+            <b> {{ post.title }} </b>
+            <p *ngIf="post.body[0].length>100;else elseBlock ">
+              {{ post.body[0].substring(0,100)}}...
+            </p>
+            <ng-template #elseBlock>
+              <p>{{post.body[0]}}</p>
+            </ng-template>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>
+              <mat-icon>thumb_up</mat-icon>LIKE
+            </button>
+            <button mat-button>
+              <mat-icon>autorenew</mat-icon>SHARE
+            </button>
+            <a [routerLink]="['/post', post.id, post.slug]" style="float: right;" mat-flat-button color=accent>Read
+              More</a>
+          </mat-card-actions>
+        </mat-card>
+      </ng-template>
     </div>
   </div>
 </div>
