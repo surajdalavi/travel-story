@@ -1,0 +1,59 @@
+/* Add home page styles & imports to this file! */
+
+.bounds {
+    background-color:#ddd;
+    height :91vh;
+  }
+  
+  .sec1 {
+    background:white;
+    color:white;
+    text-transform: uppercase 
+
+ }
+  
+  .sec2 {
+    background: white;
+    color:blueviolet;
+    overflow-y: scroll;
+    text-align:center;
+    text-transform: uppercase 
+  }
+  .sec3{background: white;
+    text-transform: uppercase
+  }
+  
+  .sec1, .sec2, .sec3 {
+    padding-top:20px;
+  }
+  .content {
+    min-width: 30px;
+    /*height: 400px;*/
+  }
+  .tp-card{
+    height: 80vh;
+  }
+ .mat-card-header{
+   background-color: burlywood;
+   justify-content: center;
+   padding: 10px;
+   text-align:center
+
+ }
+ .mat-card{
+  color: black;
+  border-radius: 30px !important;
+  background-color: rgba(26, 25, 25, 0.041);
+ }
+ .wh-card{
+  height: 40vh;
+}
+.wf-card{
+  height: 40vh;
+}
+.example-card {
+  max-width: 900px;
+}
+ 
+
+  
