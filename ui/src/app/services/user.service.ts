@@ -8,6 +8,8 @@ export interface IUser {
   username: string;
   profilePic: string;
   mobileNo?: string;
+  followers?: string[];
+  following?: string[];
 }
 
 function generateId() {

@@ -4,8 +4,8 @@
     <p>Username</p>
     <p>Password</p>
     <p>Submit</p>
-    <p (click)="forgot=!forgot" style="cursor: pointer;"> Forgot Password </p>
-    <div *ngIf="forgot">
+    <p (click)="hasForgottenPassword=!hasForgottenPassword" style="cursor: pointer;"> Forgot Password </p>
+    <div *ngIf="hasForgottenPassword">
       <form>
         <mat-form-field appearance="outline" color="primary">
           <mat-label> Email ID </mat-label>

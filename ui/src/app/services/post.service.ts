@@ -17,6 +17,7 @@ export interface IPost {
 })
 export class PostService {
   post: IPost[] = posts;
+  // Creating post observable
   post$ = new BehaviorSubject<IPost[]>(this.post);
   constructor() {}
   addPost(post) {

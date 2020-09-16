@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PostService, IPost } from '../services/post.service';
-import { IUser, UserService } from '../services/user.service';
+import { UserService } from '../services/user.service';
 
 import { Observable } from 'rxjs';
 
