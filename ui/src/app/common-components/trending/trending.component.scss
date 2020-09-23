@@ -1,0 +1,19 @@
+mat-card-header {
+  background-color: burlywood;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+mat-card {
+  color: black;
+  border-radius: 30px !important;
+  background-color: rgba(26, 25, 25, 0.041);
+  box-shadow: 10px 10px 42px -21px rgba(0, 0, 0, 0.75);
+  height: 70%;
+  // width: 70%;
+}
+
+mat-card-content p {
+  padding: 1em;
+}

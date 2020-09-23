@@ -1,0 +1,16 @@
+<app-header></app-header>
+<div class="bounds">
+  <div class="content" fxLayout="row " fxLayout.xs="column" fxLayoutGap="20px">
+    <div fxFlex class="sec1" fxFlex.xs="55">
+      <app-trending></app-trending>
+    </div>
+    <div fxFlex="50" class="sec2">
+      <router-outlet></router-outlet>
+    </div>
+    <div fxFlex class="sec3">
+      <app-to-follow [title]="'What\'s Happening'"></app-to-follow>
+      <br>
+      <app-to-follow [title]="'Who To Follow'"></app-to-follow>
+    </div>
+  </div>
+</div>

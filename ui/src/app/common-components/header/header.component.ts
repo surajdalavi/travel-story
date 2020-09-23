@@ -19,6 +19,8 @@ export class HeaderComponent implements OnInit {
   }
   addPost() {
     const dialogConfig = new MatDialogConfig();
+    dialogConfig.width = '900px';
+    dialogConfig.height = '600px';
     this.dialog.open(AddPostComponent, dialogConfig);
   }
 }

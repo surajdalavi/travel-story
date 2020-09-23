@@ -13,6 +13,8 @@ import { CommonComponentsModule } from './common-components/common-components.mo
 import { PostModule } from './posts/post/post.module';
 import { SearchComponent } from './search/search.component';
 import { AddPostComponent } from './posts/add-post/add-post.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MainComponentComponent } from './main-component/main-component.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { AddPostComponent } from './posts/add-post/add-post.component';
     PostsComponent,
     SearchComponent,
     AddPostComponent,
+    MainComponentComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +32,7 @@ import { AddPostComponent } from './posts/add-post/add-post.component';
     AuthenticationModule,
     CommonComponentsModule,
     PostModule,
+    FlexLayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

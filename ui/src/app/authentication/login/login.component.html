@@ -3,7 +3,7 @@
     <h1>Log In</h1>
     <p>Username</p>
     <p>Password</p>
-    <p>Submit</p>
+    <button mat-stroked-button color=warn (click)="onLogin()">Login</button>
     <p (click)="hasForgottenPassword=!hasForgottenPassword" style="cursor: pointer;"> Forgot Password </p>
     <div *ngIf="hasForgottenPassword">
       <form>
