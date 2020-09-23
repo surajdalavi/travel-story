@@ -1,24 +1,24 @@
 
 
 
- <mat-card fxLayout="right" class="example-card">
+ <mat-card class="example-card">
     
     <mat-card-title>Who to follow</mat-card-title>
     <mat-list>
-        <mat-card-header>
+        <mat-card-header *ngFor='let user of user '>
             <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title>Huawae </mat-card-title>
-            <mat-card-subtitle>@Huawae  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+            <mat-card-title>{{user.name}} </mat-card-title>
+            <mat-card-subtitle>@{{user.uname}}    
         
-        <button mat-stroked-button color="primary">Follow</button></mat-card-subtitle>
+        <button class="mat" mat-stroked-button color="primary">Follow</button></mat-card-subtitle>
         <mat-divider></mat-divider>
         </mat-card-header>
         
         
-        <mat-card-header>
+        <!-- <mat-card-header>
         <div mat-card-avatar class="example-header-image"></div>
         <mat-card-title> Deepika Padukone</mat-card-title>
-        <mat-card-subtitle>@Deepika Padukone  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+        <mat-card-subtitle>@Deepika Padukone    
   
         <button mat-stroked-button color="primary">Follow</button></mat-card-subtitle>
         <mat-divider></mat-divider>
@@ -28,11 +28,11 @@
         <mat-card-header>
         <div mat-card-avatar class="example-header-image"></div>
         <mat-card-title> Ocar the Grouch </mat-card-title>
-        <mat-card-subtitle>@Ocar the Grouch  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+        <mat-card-subtitle>@Ocar the Grouch    
         <button mat-stroked-button color="primary">Follow</button></mat-card-subtitle>
         <mat-divider></mat-divider>
         </mat-card-header>
-         
+          -->
         <h3>Show More</h3>
         </mat-list>
       
