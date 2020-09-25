@@ -6,10 +6,11 @@ import { ChangePasswordComponent } from "./change-password/change-password.compo
 import { MaterialModule } from "../material/material.module";
 import { RouterModule } from "@angular/router";
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [LoginComponent, RegisterComponent, ChangePasswordComponent, LandingPageComponent],
-  imports: [CommonModule, MaterialModule, RouterModule],
+  imports: [CommonModule, MaterialModule, RouterModule,ReactiveFormsModule],
   exports: [LoginComponent, RegisterComponent, ChangePasswordComponent],
 })
 export class AuthenticationModule {}
