@@ -1,42 +1,27 @@
 .search-container {
   // background-color: hsl(190, 84%, 81%);
-  background-color: #444;
+  background-color: #074869;
+  color: white;
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-
 .search {
-  background-color: black;
+  //background-color: black;
   color: white;
 }
-
 .filter {
-  width: 100px;
-  // color: white;
-  position: relative;
-  text-align: center;
-  background: #4a7c03;
-  border: 3px solid rgb(7, 90, 21);
-  height: 3em;
-  line-height: 1em;
-}
-
-.filter:hover {
-  background: #67a017;
-}
-
-#filter {
   color: white;
 }
 
 button:hover {
-  background: #199b32;
+  background:#012030 ;
 }
 
 button {
+  background-color: darkslategrey;
   height: 50px;
   width: 100px;
   margin-top: -1.5em;

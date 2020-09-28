@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
-selectedvalue: string;
-  constructor() { }
-
-  ngOnInit() {
+  selectedvalue: string;
+  change=true;
+  
+    constructor() { }
+  
+    ngOnInit() {}
+  
+    onSelectChange() {
+      this.change= this.selectedvalue !== undefined ? false:true;
+    }
+  
   }
-
-}

@@ -1,19 +1,25 @@
 <div>
+
   <form class="search-container">
+
     <mat-form-field appearance="outline" style="width:70%">
       <mat-label class="search">Search</mat-label>
-      <input class="search" matInput class="center" type="text" placeholder="Search..">
+      <input required class="search" matInput class="center" type="text" placeholder="Search..">
     </mat-form-field>
+
     <mat-form-field appearance="outline">
       <mat-label>Filter</mat-label>
-      <mat-select [(value)]="selectedvalue">
+      <mat-select  required [(value)]="selectedvalue"  (selectionChange)="onSelectChange()">
         <mat-option>None</mat-option>
         <mat-option value="People">People</mat-option>
         <mat-option value="Places">Places</mat-option>
-        <mat-option value="#"># tag</mat-option>
+        <mat-option value="# tag"># tag</mat-option>
       </mat-select>
     </mat-form-field>
-    <button mat-raised-button type="submit">Search</button>
+    
+    <button mat-raised-button class="btn btn-primary"  [disabled]="change" type="submit" style="color: rgb(255, 255, 255);">Search</button>
+
   </form>
+
 </div>
 {{selectedvalue}}
