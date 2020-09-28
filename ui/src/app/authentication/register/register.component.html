@@ -1,38 +1,54 @@
 <div class="page">
   <div class="form">
     <h1>Create new account</h1>
-    <form>
+    <form [formGroup]="signupForm" (submit)="onSubmit()">
+      
       <div class="form-group">
         <label>Name</label>
-        <input type="text" class="form-control" style="width:300px">
+        <input [class.is-invalid]="signupForm.get('Name').invalid &&
+                                    signupForm.get('Name').touched" formControlName="Name" type="text"  class="form-control" style="width:300px">
+          <small [class.d-none]="signupForm.get('Name').valid || signupForm.get('Name').untouched" class="text-danger">Name is required</small>                          
       </div>
 
 
       <div class="form-group">
         <label>User Name</label>
-        <input type="text" class="form-control" style="width:300px">
+        <input [class.is-invalid]="signupForm.get('UserName').invalid &&
+                                   signupForm.get('UserName').touched" formControlName="UserName" type="text" class="form-control" style="width:300px">
+        <small [class.d-none]="signupForm.get('UserName').valid || signupForm.get('UserName').untouched" class="text-danger">The User Name is required</small>                          
       </div>
-
+      
       <div class="form-group">
         <label>Email</label>
-        <input type="email" class="form-control" style="width:300px">
+        <input [class.is-invalid]="signupForm.get('Email').invalid &&
+                                   signupForm.get('Email').touched"  formControlName="Email" type="email" class="form-control" style="width:300px">
+        <small [class.d-none]="signupForm.get('Email').valid || signupForm.get('Email').untouched" class="text-danger">Email is required</small>                          
       </div>
 
       <div class="form-group">
         <label>Password</label>
-        <input type="password" class="form-control" style="width:300px">
+        <input [class.is-invalid]="signupForm.get('Password').invalid &&
+                                   signupForm.get('Password').touched" formControlName="Password" type="password" class="form-control" style="width:300px">
+          <small [class.d-none]="signupForm.get('Password').valid || signupForm.get('Password').untouched" class="text-danger"> Password is required</small>                          
       </div>
-
+      
       <div class="form-group">
         <label>Confirm Password</label>
-        <input type="password" class="form-control" style="width:300px">
+        <input [class.is-invalid]="signupForm.get('ConfirmPassword').invalid &&
+                                   signupForm.get('ConfirmPassword').touched "  formControlName="ConfirmPassword" type="password" class="form-control" style="width:300px">
+          <small [class.d-none]="signupForm.get('ConfirmPassword').valid || signupForm.get('ConfirmPassword').untouched" class="text-danger"> ConfirmPassword is required</small>
       </div>
-
-
-      <button class="btn btn-primary" type="submit">Submit</button>
+      
+  
+      <button class="btn btn-primary" type="submit" >Submit</button>
+     <!--- <button (click)="loadApiData()"  class="btn btn-secondary ml-2" type="Submit">Load API data</button> -->
     </form>
+   {{signupForm.value | json}}
   </div>
-  <div>
-    <img class="picture" src="../../../assets/coverp.jpg" alt="Photo of graph">
-  </div>
+
+  <div> 
+       
+    <img  class="picture" src="assets/coverp.jpg" alt="Photo of graph">
+
+  </div>    
 </div>
