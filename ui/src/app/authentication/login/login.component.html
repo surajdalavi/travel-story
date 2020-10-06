@@ -1,39 +1,36 @@
-<div class="page">
-  <div class="form">
-    <h1>Log In</h1>
-    <form [formGroup]="loginForm" (submit)="submitForm()">
-      <mat-form-field appearance="fill" color="accent">
-        <mat-label>Enter your email/username</mat-label>
-        <input matInput type="email">
-        <mat-error *ngIf="loginForm.get('email').hasError('required')">
-          Email is <strong>required</strong>
-        </mat-error>
-        <button mat-icon-button matSuffix>
-          <mat-icon>email</mat-icon>
-        </button>
-      </mat-form-field>
-      <mat-form-field appearance="fill" color="accent">
-        <mat-label>Enter your password</mat-label>
-        <input matInput [type]="hide ? 'password' : 'text'">
-        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-          [attr.aria-pressed]="hide">
-          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-        </button>
-      </mat-form-field>
-      <button mat-raised-button type="submit" color="accent">Login</button>
-    </form>
-    <br>
-    <!-- Forgot Password -->
-    <p (click)="hasForgottenPassword=!hasForgottenPassword" style="cursor: pointer;"> Forgot Password </p>
-    <div *ngIf="hasForgottenPassword">
-      <mat-form-field appearance="outline" color="primary" required>
-        <mat-label> Email ID </mat-label>
-        <input matInput placeholder="Enter email ID">
-      </mat-form-field>
-      <button mat-raised-button type="submit">Send Mail </button>
-    </div>
-  </div>
-  <div>
-    <img class="picture" src="../../../assets/coverp.jpg" alt="Photo of graph">
+<div class="login-form">
+  <h1>Log In</h1>
+  <form [formGroup]="loginForm" (submit)="submitForm()">
+    <mat-form-field appearance="fill" color="accent">
+      <mat-label>Enter your email/username</mat-label>
+      <input matInput type="email" />
+      <mat-error *ngIf="loginForm.get('email').hasError('required')">
+        Email is <strong>required</strong>
+      </mat-error>
+      <button mat-icon-button matSuffix>
+        <mat-icon>email</mat-icon>
+      </button>
+    </mat-form-field>
+    <mat-form-field appearance="fill" color="accent">
+      <mat-label>Enter your password</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'" />
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide">
+        <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+      </button>
+    </mat-form-field>
+    <button mat-raised-button type="submit" color="accent">Login</button>
+  </form>
+  <br />
+  <!-- Forgot Password -->
+  <p (click)="hasForgottenPassword = !hasForgottenPassword" style="cursor: pointer">
+    Forgot Password
+  </p>
+  <div *ngIf="hasForgottenPassword">
+    <mat-form-field appearance="outline" color="primary" required>
+      <mat-label> Email ID </mat-label>
+      <input matInput placeholder="Enter email ID" />
+    </mat-form-field>
+    <button mat-raised-button type="submit">Send Mail</button>
   </div>
 </div>

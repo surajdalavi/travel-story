@@ -1,24 +1,9 @@
-.form {
-  background-color: #057;
-  padding: 0em 2em;
-  width: 25%;
-  max-width: 25%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.picture {
-  width: 100%;
-  height: auto;
-}
-
-.page {
-  display: flex;
-}
-
 mat-icon,
 h1,
 p {
   color: white
+}
+
+p {
+  text-align: justify;
 }
