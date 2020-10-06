@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 export interface IUser {
   id: number;
@@ -46,7 +48,7 @@ export class UserService {
       profilePic: '../../assets/user/1.jpg',
     },
   ];
-  constructor() {}
+  constructor(private http: HttpClient, private router: Router) {}
   getUserDetails(username): IUser {
     return this.users.find((e) => e.username === username);
   }
@@ -57,5 +59,11 @@ export class UserService {
   getProfilePic(username): String {
     let user = this.users.find((e) => e.username === username);
     return user.profilePic;
+  }
+  login() {
+    this.http.get('http://localhost:3000/api/login').subscribe((msg) => {
+      console.log(msg);
+      this.router.navigate(['/search']);
+    });
   }
 }
