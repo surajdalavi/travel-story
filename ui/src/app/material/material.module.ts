@@ -10,6 +10,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatDividerModule} from '@angular/material/divider';
+import { MatListModule} from '@angular/material/list';
 
 const material = [
   MatGridListModule,
@@ -22,6 +24,8 @@ const material = [
   MatInputModule,
   MatDialogModule,
   MatSidenavModule,
+  MatDividerModule, 
+  MatListModule
 ];
 
 @NgModule({

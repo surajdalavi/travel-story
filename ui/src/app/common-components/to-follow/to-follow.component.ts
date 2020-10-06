@@ -11,5 +11,21 @@ export class ToFollowComponent implements OnInit {
 
   ngOnInit() {
   }
+user=[
+  {
+    name:'abc',
+    uname:'adc',
+  },
 
+  {
+    name:'abc',
+    uname:'adc',
+  },
+
+  {
+    name:'abc',
+    uname:'adc',
+  }
+
+]
 }
