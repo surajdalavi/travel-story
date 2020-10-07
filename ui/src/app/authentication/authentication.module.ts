@@ -7,6 +7,7 @@ import { MaterialModule } from '../material/material.module';
 import { RouterModule } from '@angular/router';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RouterModule,
     ReactiveFormsModule,
     FormsModule,
+    HttpClientModule,
   ],
   exports: [LoginComponent, RegisterComponent, ChangePasswordComponent],
 })
