@@ -66,4 +66,11 @@ export class UserService {
       this.router.navigate(['/search']);
     });
   }
+  register(){
+    const user = this.users[0];
+    this.http.post('http://localhost:3000/user/register',user).subscribe((msg)=>{
+      console.log(msg);
+      this.router.navigate(['/search']);
+    })
+  }
 }

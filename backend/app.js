@@ -1,5 +1,12 @@
 const express = require('express');
+const bodyparser = require('body-parser');
+const db = require('./db');
+
+
 const app = express();
+app.use(bodyparser.json()); 
+
+const userController = require('./controllers/user')
 
 app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
@@ -13,6 +20,8 @@ app.use((req, res, next) => {
     );
     next();
 });
+
+app.use('/user',userController)
 
 app.get("/api/login", (req, res, next) => {
     res.status(200).json({
