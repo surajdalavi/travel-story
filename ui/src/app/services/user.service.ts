@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subject } from 'rxjs';
 
 export interface IUser {
   id: number;
@@ -22,6 +23,11 @@ function generateId() {
   providedIn: 'root',
 })
 export class UserService {
+ 
+  // Adding authentication to check if the user is logged in or not 
+  private isAuthenticated = false;
+  private authStatusListener = new Subject<boolean>();
+
   users: IUser[] = [
     {
       id: generateId(),
@@ -48,6 +54,15 @@ export class UserService {
       profilePic: '../../assets/user/1.jpg',
     },
   ];
+  // returning the value of isAuthenticated
+  getIsAuthenticated() {
+    return this.isAuthenticated;
+  }
+  // returning a listener
+  getAuthStatusListner() {
+    return this.authStatusListener.asObservable();
+  }
+
   constructor(private http: HttpClient, private router: Router) {}
   getUserDetails(username): IUser {
     return this.users.find((e) => e.username === username);
@@ -63,7 +78,9 @@ export class UserService {
   login() {
     this.http.get('http://localhost:3000/api/login').subscribe((msg) => {
       console.log(msg);
-      this.router.navigate(['/search']);
+      this.isAuthenticated = true;
+      this.authStatusListener.next(true);
+      this.router.navigateByUrl('/home-page', { state: { to: 'home' } });
     });
   }
   register(){
@@ -72,5 +89,10 @@ export class UserService {
       console.log(msg);
       this.router.navigate(['/search']);
     })
+  }
+  logout() {
+    this.isAuthenticated = false;
+    this.authStatusListener.next(false);
+    this.router.navigate(["/"]);
   }
 }

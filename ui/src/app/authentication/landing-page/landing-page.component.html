@@ -1,19 +1,5 @@
 <div class="page">
   <div class="left">
-    <div class="buttons">
-      <button mat-stroked-button *ngIf="login == false" (click)="login = !login" color="warn">
-        Login
-      </button>
-      <button mat-flat-button *ngIf="login == true" (click)="login = !login" color="warn">
-        Join Us
-      </button>
-    </div>
-    <div class="login-form" *ngIf="login == true">
-      <app-login></app-login>
-    </div>
-    <div class="register-form" *ngIf="login == false">
-      <app-register></app-register>
-    </div>
     <div class="intro">
       <p>
         Welcome to TravelStory where you can share your journey with us in words, or photos or both!
