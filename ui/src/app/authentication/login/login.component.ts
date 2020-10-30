@@ -32,7 +32,6 @@ export class LoginComponent implements OnInit {
   });
 
   submitForm() {
-    alert('done');
     this.userService.login();
   }
   constructor(

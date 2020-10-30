@@ -7,3 +7,26 @@ p {
 p {
   text-align: justify;
 }
+
+
+.page {
+  display: flex;
+  height: 100%;
+}
+
+.left {
+  background-color: #057;
+  padding: 0em 2em;
+  width: 25%;
+  max-width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+/* picture on the right */
+.picture {
+  width: 100%;
+  height: 100%;
+}

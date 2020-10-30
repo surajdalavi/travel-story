@@ -1,4 +1,7 @@
-<div class="login-form">
+
+<div class="page">
+  <div class="left">
+    <div class="login-form">
   <h1>Log In</h1>
   <form [formGroup]="loginForm" (submit)="submitForm()">
     <mat-form-field appearance="fill" color="accent">
@@ -32,5 +35,21 @@
       <input matInput placeholder="Enter email ID" />
     </mat-form-field>
     <button mat-raised-button type="submit">Send Mail</button>
+  </div>
+</div>
+    
+    <div class="intro">
+      <p>
+        Welcome to TravelStory where you can share your journey with us in words, or photos or both!
+        Phasellus blanditeros eget enim vestibulum, vel
+        consectetur mi vestibulum. Quisque sit amet justo a orci scelerisque
+        pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Aliquam id laoreet mauris, in tincidunt ligula. Morbi pharetra ut tortor
+        in eleifend.
+      </p>
+    </div>
+  </div>
+  <div class="right">
+    <img src="../../../assets/coverp.jpg" alt="" class="picture">
   </div>
 </div>
